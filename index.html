@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz de Ortografía | Tendajón Literario</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>¿Qué tal está tu ortografía?</h1>
+    <p>Pon a prueba tus conocimientos gramaticales y ortográficos en Tendajón Literario.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- Sección para pedir el nombre del usuario -->
+  <section class="card user-info-card">
+    <div class="meta">Registro de Participante</div>
+    <label for="userName" class="question">Escribe tu nombre para iniciar el quiz:</label>
+    <input type="text" id="userName" placeholder="Ingresa tu nombre aquí..." autocomplete="name" required>
+  </section>
+
+  <p class="small">Selecciona la opción correcta en cada una de las preguntas. Al finalizar, haz clic en <b>Calificar respuestas</b> para obtener tus resultados e explicaciones.</p>
+  
+  <div class="progress" aria-label="Progreso"><div class="bar" id="bar"></div></div>
+  
+  <div id="quiz"></div>
+  
+  <section class="card" id="results" aria-live="polite">
+    <div class="meta">Resultado final</div>
+    <div class="score" id="score"></div>
+    <p id="message"></p>
+    <button class="secondary" onclick="resetQuiz()">Volver a intentarlo</button>
+  </section>
+
+  <div class="actions">
+    <button class="primary" onclick="gradeQuiz()">Calificar respuestas</button>
+    <button class="secondary" onclick="resetQuiz()">Reiniciar</button>
+  </div>
+</main>
+
+<footer>Tendajón Literario — Ejercicios de práctica interactivos.</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
